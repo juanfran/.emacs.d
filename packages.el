@@ -23,7 +23,6 @@
     smartparens
     bookmark+
     bm
-    whitespace-cleanup-mode
     highlight-chars
     ido-ubiquitous
     ))

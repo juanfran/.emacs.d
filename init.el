@@ -9,6 +9,7 @@
 
 ;; highlight tabs
 (toggle-highlight-tabs)
+(toggle-highlight-trailing-whitespace)
 
 ;; Undo tree
 (global-undo-tree-mode)
@@ -62,8 +63,8 @@
 ;;Anzu
 (global-anzu-mode +1)
 
-;; White space clean
-(global-whitespace-cleanup-mode)
+;; Clean trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Hide default bars
 (menu-bar-mode -1)
