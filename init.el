@@ -123,6 +123,9 @@
      (list (line-beginning-position)
            (line-beginning-position 2)))))
 
+;; delete the selection with a keypress
+(delete-selection-mode t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
