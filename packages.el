@@ -25,6 +25,7 @@
     bm
     highlight-chars
     ido-ubiquitous
+    groovy-mode
     ))
 
 (defun has-package-not-installed ()
