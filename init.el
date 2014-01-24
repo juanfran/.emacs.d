@@ -50,7 +50,7 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; Visible Bookmarks
-(global-set-key (kbd "<C-f1>") 'bm-toggle)
+(global-set-key (kbd "<S-f1>") 'bm-toggle)
 (global-set-key (kbd "<f2>")   'bm-next)
 (global-set-key (kbd "<S-f2>") 'bm-previous)
 
@@ -91,7 +91,7 @@
 (setq auto-save-default nil)
 
 ;; Disable auto-backup
-;;(setq make-backup-files nil)
+(setq make-backup-files nil)
 
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
@@ -101,6 +101,7 @@
 (global-set-key (kbd "C-o") 'open-next-line)
 
 ;; Indentation
+(setq-default c-basic-offset 4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
