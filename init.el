@@ -110,6 +110,9 @@
   (lambda ()
     (set (make-local-variable 'sgml-basic-offset) 4)))
 
+;; Display full path in the title bar
+(setq-default frame-title-format "%f")
+
 ;; code from prelude
 ;; note - this should be after volatile-highlights is required
 ;; add the ability to copy and cut the current line, without marking it
