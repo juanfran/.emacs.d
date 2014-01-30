@@ -26,6 +26,9 @@
     highlight-chars
     ido-ubiquitous
     groovy-mode
+    less-css-mode
+    jade-mode
+    php-mode
     ))
 
 (defun has-package-not-installed ()

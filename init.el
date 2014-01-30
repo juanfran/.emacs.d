@@ -105,6 +105,11 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+;; Default indentation is usually 2 spaces, changing to 4.
+(add-hook 'html-mode-hook
+  (lambda ()
+    (set (make-local-variable 'sgml-basic-offset) 4)))
+
 ;; code from prelude
 ;; note - this should be after volatile-highlights is required
 ;; add the ability to copy and cut the current line, without marking it
