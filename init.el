@@ -91,7 +91,7 @@
 (setq auto-save-default nil)
 
 ;; Disable auto-backup
-(setq make-backup-files nil)
+(setq backup-directory-alist `(("." . "~/.emacs_saves")))
 
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
@@ -134,6 +134,10 @@
 
 ;; delete the selection with a keypress
 (delete-selection-mode t)
+
+;;yasnippet
+(yas-global-mode 1)
+(global-set-key (kbd "C-x y") 'helm-yas-complete)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

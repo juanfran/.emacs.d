@@ -29,6 +29,9 @@
     less-css-mode
     jade-mode
     php-mode
+    yasnippet
+    helm
+    helm-c-yasnippet
     ))
 
 (defun has-package-not-installed ()
