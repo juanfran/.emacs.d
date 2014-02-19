@@ -106,9 +106,7 @@
 (setq-default tab-width 4)
 
 ;; Default indentation is usually 2 spaces, changing to 4.
-(add-hook 'html-mode-hook
-  (lambda ()
-    (set (make-local-variable 'sgml-basic-offset) 4)))
+(setq web-mode-markup-indent-offset 4)
 
 ;; Display full path in the title bar
 (setq-default frame-title-format "%f")
