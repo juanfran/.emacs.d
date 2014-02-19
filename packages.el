@@ -32,6 +32,7 @@
     yasnippet
     helm
     helm-c-yasnippet
+    web-mode
     ))
 
 (defun has-package-not-installed ()

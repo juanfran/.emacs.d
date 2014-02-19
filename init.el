@@ -135,9 +135,16 @@
 ;; delete the selection with a keypress
 (delete-selection-mode t)
 
+;; groovy
+(add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
+(add-to-list 'auto-mode-alist '("\\.gsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
+
 ;;yasnippet
 (yas-global-mode 1)
 (global-set-key (kbd "C-x y") 'helm-yas-complete)
+(setq yas/root-directory "~/emacs/snippets")
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
