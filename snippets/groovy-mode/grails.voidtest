@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: grails void test
+# key: grails.voidtest
+# --
+void "${1:test}" () {
+     setup:
+        $0
+     when:
+
+     then:
+
+}

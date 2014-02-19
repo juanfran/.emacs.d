@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: grails spock integrationSpec
+# key: grails.spock.integration
+# --
+package ${1:package}
+
+import grails.plugin.spock.*
+import grails.test.mixin.*
+import spock.lang.*
+
+class ${2:testClass}IntegrationSpec extends IntegrationSpec {
+      $0
+}
