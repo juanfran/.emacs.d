@@ -88,10 +88,21 @@
 (global-set-key (kbd "C-c m") 'uncomment-region)
 
 ;; Disable auto-save
-(setq auto-save-default nil)
+;;(setq auto-save-default nil)
 
-;; Disable auto-backup
-(setq backup-directory-alist `(("." . "~/.emacs_saves")))
+;; Auto-save files
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+;; Backup files
+;;(setq make-backup-files nil)
+(setq backup-directory-alist
+      `(("." . "~/.emacs_saves")))
+
+;; Disable lockfiles
+;;(setq create-lockfiles nil)
 
 ;; Font size
 (global-set-key (kbd "C-+") 'text-scale-increase)
