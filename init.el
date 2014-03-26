@@ -115,6 +115,9 @@
 (setq-default c-basic-offset 4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq-default sgml-basic-offset 4)
+(setq-default nxml-child-indent tab-width)
+(setq-default nxml-outline-child-indent tab-width)
 
 ;; Default indentation is usually 2 spaces, changing to 4.
 (setq web-mode-markup-indent-offset 4)
@@ -146,7 +149,7 @@
 
 ;; groovy
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
-(add-to-list 'auto-mode-alist '("\\.gsp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.gsp\\'" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
 
 ;;yasnippet
