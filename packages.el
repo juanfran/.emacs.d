@@ -33,6 +33,7 @@
     helm
     helm-c-yasnippet
     web-mode
+    dired+
     ))
 
 (defun has-package-not-installed ()
