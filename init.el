@@ -22,6 +22,9 @@
 (require 'volatile-highlights)
 (volatile-highlights-mode t)
 
+;; dired+
+(require 'dired+)
+
 ;; Smartparens
 (smartparens-global-mode t)
 
