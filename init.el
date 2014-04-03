@@ -114,6 +114,9 @@
 ;; Open next line
 (global-set-key (kbd "C-o") 'open-next-line)
 
+;; Maximize buffer
+(global-set-key (kbd "C-c f") 'toggle-maximize-buffer)
+
 ;; Indentation
 (setq-default c-basic-offset 4)
 (setq-default indent-tabs-mode nil)
