@@ -90,6 +90,9 @@
 (global-set-key (kbd "C-c n") 'comment-region)
 (global-set-key (kbd "C-c m") 'uncomment-region)
 
+;; Wind Move
+(windmove-default-keybindings)
+
 ;; Disable auto-save
 ;;(setq auto-save-default nil)
 
