@@ -24,6 +24,18 @@
 
 ;; dired+
 (require 'dired+)
+(require 'dired)
+
+(define-key dired-mode-map "|" 'dired-create-file)
+
+(defun dired-create-file (filename)
+  "Create FILENAME from Dired in if not exists.
+If FILENAME already exists do nothing."
+  (interactive "FCreate file: ")
+  (shell-command (format "touch %s" filename))
+  (when (file-exists-p filename)
+    (dired-add-file filename)
+    (dired-move-to-filename)))
 
 ;; Smartparens
 (smartparens-global-mode t)
@@ -160,6 +172,9 @@
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
 (add-to-list 'auto-mode-alist '("\\.gsp\\'" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
+
+;; sass
+(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
 
 ;;yasnippet
 (yas-global-mode 1)
