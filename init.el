@@ -174,7 +174,9 @@ If FILENAME already exists do nothing."
 (add-to-list 'auto-mode-alist '("\\.gradle$" . groovy-mode))
 
 ;; sass
-(add-to-list 'auto-mode-alist '("\\.scss$" . sass-mode))
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+(setq-default scss-compile-at-save nil)
 
 ;;yasnippet
 (yas-global-mode 1)

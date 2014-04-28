@@ -34,7 +34,7 @@
     helm-c-yasnippet
     web-mode
     dired+
-    sass-mode
+    scss-mode
     ))
 
 (defun has-package-not-installed ()
