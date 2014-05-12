@@ -129,6 +129,9 @@ If FILENAME already exists do nothing."
 ;; Open next line
 (global-set-key (kbd "C-o") 'open-next-line)
 
+;; Duplicate line
+(global-set-key (kbd "C-d") 'duplicate-current-line-or-region)
+
 ;; Maximize buffer
 (global-set-key (kbd "C-c f") 'toggle-maximize-buffer)
 
@@ -177,6 +180,11 @@ If FILENAME already exists do nothing."
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (setq-default scss-compile-at-save nil)
+(setq-default css-indent-offset 2)
+
+;; pomodoro
+(require 'pomodoro)
+(pomodoro-add-to-mode-line)
 
 ;;yasnippet
 (yas-global-mode 1)
