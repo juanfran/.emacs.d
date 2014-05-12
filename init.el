@@ -130,7 +130,7 @@ If FILENAME already exists do nothing."
 (global-set-key (kbd "C-o") 'open-next-line)
 
 ;; Duplicate line
-(global-set-key (kbd "C-d") 'duplicate-current-line-or-region)
+(global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
 
 ;; Maximize buffer
 (global-set-key (kbd "C-c f") 'toggle-maximize-buffer)
