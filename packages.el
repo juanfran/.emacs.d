@@ -36,6 +36,7 @@
     dired+
     scss-mode
     multi-term
+    magit
     ))
 
 (defun has-package-not-installed ()
