@@ -35,6 +35,7 @@
     web-mode
     dired+
     scss-mode
+    multi-term
     ))
 
 (defun has-package-not-installed ()

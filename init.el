@@ -9,7 +9,6 @@
 
 ;; highlight tabs
 (toggle-highlight-tabs)
-(toggle-highlight-trailing-whitespace)
 
 ;; Undo tree
 (global-undo-tree-mode)
@@ -89,6 +88,9 @@ If FILENAME already exists do nothing."
 ;; Remove default start-up buffer
 (setq inhibit-startup-message t)
 
+;; Show trailing whitespace
+(setq-default show-trailing-whitespace t)
+
 ;; Set Linum-Mode on
 (global-linum-mode t)
 
@@ -142,6 +144,7 @@ If FILENAME already exists do nothing."
 (setq-default sgml-basic-offset 4)
 (setq-default nxml-child-indent tab-width)
 (setq-default nxml-outline-child-indent tab-width)
+(setq js-indent-level 2)
 
 ;; Default indentation is usually 2 spaces, changing to 4.
 (setq web-mode-markup-indent-offset 4)
@@ -182,9 +185,20 @@ If FILENAME already exists do nothing."
 (setq-default scss-compile-at-save nil)
 (setq-default css-indent-offset 2)
 
-;; pomodoro
-(require 'pomodoro)
-(pomodoro-add-to-mode-line)
+;; multi-term
+(setq multi-term-program "/bin/zsh")
+
+(add-hook 'term-mode-hook
+(lambda ()
+  (setq term-buffer-maximum-size 10000)
+  (setq show-trailing-whitespace nil)
+  (setq yas-dont-activate t)
+  ))
+
+(setq term-bind-key-alist
+      (list
+       (cons "C-c C-j" 'term-line-mode)
+       (cons "C-c C-k" 'term-char-mode)))
 
 ;;yasnippet
 (yas-global-mode 1)
